@@ -1,0 +1,25 @@
+{
+  "name": "typescript-playwright-assessment",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Focused API and UI automation assessment using TypeScript and Playwright Test.",
+  "scripts": {
+    "test:all": "npm run clean && playwright test",
+    "clean": "rm -rf test-results playwright-report",
+    "test:api": "playwright test --project=api",
+    "test:ui": "playwright test --project=chromium",
+    "test:chromium": "playwright test --project=chromium --headed",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "typecheck": "tsc --noEmit",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^22.19.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.10"
+  }
+}
